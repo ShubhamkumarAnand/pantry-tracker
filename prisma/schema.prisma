@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
     provider = "prisma-client-js"
 }
@@ -10,11 +7,25 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+model User {
+    id          String       @id @default(cuid())
+    username    String?      @unique
+    email       String       @unique
+    pantryItems PantryItem[]
+}
 
-    @@index([name])
+model PantryItem {
+    id       String  @id @default(cuid())
+    name     String
+    category String
+    quantity Int
+    suffix   String?
+
+    // Expiry date for perishable items
+    expiryDate DateTime?
+
+    // Reference to the User who owns this pantry item
+    userId String
+
+    User User @relation(fields: [userId], references: [id])
 }

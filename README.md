@@ -1,28 +1,28 @@
-# Create T3 App
+# Pantry Tracker Application
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Pantry Tracker is an application designed to help you keep track of the food items in your home pantry. Whether you want to prevent food wastage, plan meals more efficiently, or simply know what's available, Pantry Tracker has you covered.
 
-## What's next? How do I make an app with this?
+## Key Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+1. **Inventory Management:** Add, update, and remove items from your pantry inventory.
+Categorize items for better organization (e.g., grains, spices, canned goods).
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+2. **Expiry Notifications:** Receive alerts when items are approaching their expiration date. Reduce food waste by using items before they expire.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+3. **Shopping List:** Automatically generate a shopping list based on the items you need to restock.Customize your shopping list and mark items as purchased.
 
-## Learn More
+4. **Usage History:** Track usage history to understand consumption patterns.
+Analyze data to make informed shopping and meal planning decisions.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+5. **User-Friendly Interface:** Intuitive design for easy navigation and quick data entry.
+Support for both web and mobile platforms for convenience.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## License
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+This project is licensed under the MIT License.
 
-## How do I deploy this?
+## Support
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+For any issues or questions, please open an issue.
+
+> Feel free to customize the content according to your specific choices of technologies, features, and any additional information you find relevant for your application.
