@@ -19,12 +19,14 @@ export async function addUser(formData: FormData) {
     redirect(`/user/${userData?.id}`);
   }
 
-  const user = await db.user.create({
+  await db.user.create({
     data: {
       username,
       email,
     },
   });
-  console.log(user);
+  // window.localStorage.setItem("username", username);
+  // window.localStorage.setItem("email", email);
+  // window.localStorage.setItem("id", user.id);
   return revalidatePath("/user");
 }

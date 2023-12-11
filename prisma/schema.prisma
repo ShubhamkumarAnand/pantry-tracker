@@ -27,5 +27,5 @@ model PantryItem {
     // Reference to the User who owns this pantry item
     userId String
 
-    User User @relation(fields: [userId], references: [id])
+    User User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
 }
