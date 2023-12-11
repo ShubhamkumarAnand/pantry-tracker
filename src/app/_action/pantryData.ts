@@ -9,7 +9,7 @@ export async function getPantryData(userId: string) {
       userId: userId,
     },
     orderBy: {
-      name: "asc",
+      category: "asc",
     },
   });
   return { pantryItems };
