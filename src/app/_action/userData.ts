@@ -18,15 +18,15 @@ export async function addUser(formData: FormData) {
   if (userData) {
     redirect(`/user/${userData?.id}`);
   }
-
-  await db.user.create({
-    data: {
-      username,
-      email,
-    },
-  });
-  // window.localStorage.setItem("username", username);
-  // window.localStorage.setItem("email", email);
-  // window.localStorage.setItem("id", user.id);
+  try {
+    await db.user.create({
+      data: {
+        username,
+        email,
+      },
+    });
+  } catch (error: unknown) {
+    console.log(error);
+  }
   return revalidatePath("/user");
 }

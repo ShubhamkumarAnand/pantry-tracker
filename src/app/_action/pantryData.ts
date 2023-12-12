@@ -21,7 +21,7 @@ export async function addPantryData(userId: string, formData: FormData) {
   const quantity = Number(formData.get("quantity"));
   const suffix = formData.get("suffix") as string;
 
-  const pantryItem = await db.pantryItem.create({
+  await db.pantryItem.create({
     data: {
       name,
       category,
@@ -30,16 +30,14 @@ export async function addPantryData(userId: string, formData: FormData) {
       userId,
     },
   });
-  console.log(pantryItem);
   return revalidatePath(`/user/${userId}`);
 }
 
 export async function deletePantryItem(id: string, userId: string) {
-  const pantryItem = await db.pantryItem.delete({
+  await db.pantryItem.delete({
     where: {
       id,
     },
   });
-  console.log(pantryItem);
   return revalidatePath(`/user/${userId}`);
 }
